@@ -1,0 +1,230 @@
+/* ================= PTE STYLE ================= */
+
+    /* ================= GLOBAL RESET ================= */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        background: #f8fafc;
+        overflow-x: hidden; /* Prevents horizontal scroll on mobile */
+    }
+
+    /* ================= HERO SECTION ================= */
+    .pte-hero {
+        width: 100%;
+        height: 420px;
+        margin-top: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .pte-hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .pte-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            90deg,
+            rgba(30,58,138,0.4), /* Darker gradient for better text contrast */
+            rgba(2,132,199,0.4)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .pte-hero-content {
+        max-width: 800px;
+    }
+
+    .pte-hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #ffffff;
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .pte-hero-content p {
+        color: #f1f5f9;
+        font-size: 1.25rem;
+        opacity: 1;
+        line-height: 1.6;
+    }
+
+    /* ================= MAIN CONTENT ================= */
+    .pte-section {
+        width: 100%;
+        padding: 80px 0;
+        background: #f8fafc;
+    }
+
+    .pte-container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .pte-container h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        color: #1e293b;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .pte-intro {
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        /* FIXED: Color was too light (#f0f3f7). Changed to dark grey. */
+        color: #64748b;
+        margin-bottom: 60px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* ================= CARD GRID ================= */
+    .pte-grid {
+        display: grid;
+        /* Responsive Magic: 290px ensures it fits on smaller phones */
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    /* ================= CARD STYLE ================= */
+    .pte-card {
+        background: #ffffff;
+        padding: 35px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(0,0,0,0.02);
+    }
+
+    /* Top blue line */
+    .pte-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #1e3a8a, #0284c7);
+    }
+
+    .pte-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(30, 58, 138, 0.15);
+    }
+
+    .pte-card h3 {
+        font-size: 1.5rem;
+        color: #1e3a8a;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .pte-card p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #475569;
+        margin-bottom: 20px;
+    }
+
+    /* ================= TABLE ================= */
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto; /* Enables horizontal scroll on mobile */
+        margin-top: 15px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .pte-table {
+        width: 100%;
+        min-width: 600px; /* Forces scroll if screen is smaller than 600px */
+        border-collapse: collapse;
+        background: #fff;
+    }
+
+    .pte-table th {
+        background: #1e3a8a;
+        color: #fff;
+        padding: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+    }
+
+    .pte-table td {
+        padding: 14px;
+        text-align: center;
+        border-bottom: 1px solid #e2e8f0;
+        color: #334155;
+    }
+
+    .pte-table tr:nth-child(even) {
+        background: #f8fafc;
+    }
+
+    .pte-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* ================= MOBILE RESPONSIVENESS ================= */
+    @media (max-width: 768px) {
+
+        /* Hero Adjustments */
+        .pte-hero {
+            height: 300px; /* Shorter hero on mobile */
+        }
+
+        .pte-hero-content h1 {
+            font-size: 2rem; /* Smaller title */
+        }
+
+        .pte-hero-content p {
+            font-size: 1rem;
+        }
+
+        /* Spacing Adjustments */
+        .pte-section {
+            padding: 50px 0;
+        }
+
+        .pte-container h2 {
+            font-size: 1.8rem;
+        }
+
+        .pte-intro {
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+
+        /* Grid Adjustments */
+        .pte-grid {
+            grid-template-columns: 1fr; /* Force 1 column on phones */
+            gap: 25px;
+        }
+
+        .pte-card {
+            padding: 25px; /* Less padding inside cards */
+        }
+    }
+

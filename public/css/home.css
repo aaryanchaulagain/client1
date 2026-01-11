@@ -1,0 +1,172 @@
+/* ===== CLEAN CEO SECTION (WHITE THEME) ===== */
+.ceo-section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #f4f4f4; /* Light grey background like your third reference */
+    position: relative;
+}
+
+/* Content Container */
+.ceo-container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: flex-start; /* Align to top for a professional look */
+    gap: 50px;
+}
+
+/* Text Area */
+.ceo-content {
+    flex: 1.5;
+}
+
+.ceo-content h2 {
+    font-size: 2rem;
+    color: #e31e24; /* Red accent color from your reference */
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.ceo-content .dear-students {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.ceo-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Image Area */
+.ceo-image-wrapper {
+    flex: 1;
+    text-align: center;
+}
+
+.image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ceo-name-label {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-color: #e31e24;
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #b3171b;
+    color: #fff;
+}
+/* ===== CONTACT CTA HERO SECTION ===== */
+.contact-cta {
+    width: 100%;
+    min-height: 420px;
+    background:
+        linear-gradient(rgba(55, 94, 151, 0.55), rgba(55, 94, 151, 0.3)),
+        url('../image/bookquery.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact-cta-content {
+    max-width: 900px;
+    color: #fff;
+}
+
+.contact-cta-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-cta-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    opacity: 0.95;
+}
+
+/* Button */
+.cta-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #ffffff;
+    color: #375E97;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.cta-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .contact-cta {
+        min-height: 360px;
+    }
+
+    .contact-cta-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-cta-content p {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .ceo-container {
+        flex-direction: column-reverse; /* Image moves below text on mobile */
+        text-align: left;
+    }
+}
+@media (max-width: 480px) {
+    .contact-cta-content h2 {
+        font-size: 1.8rem;
+    }
+}
