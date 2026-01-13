@@ -43,7 +43,7 @@
     </div>
 
     <div class="footer-bottom">
-        &copy; 2026 Oz Connect. All Rights Reserved by Ramro x.
+        &copy; 2026 Oz Connect. All Rights Reserved by Ramro Soft.
     </div>
 </footer>
 
